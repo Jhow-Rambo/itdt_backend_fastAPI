@@ -8,7 +8,14 @@ class InferenceBase(BaseModel):
 
 
 class InferenceCreate(InferenceBase):
-    pass
+    @validator('*',  pre=True, always=True)
+    def must_be_provided(cls, v, field):
+        if v == '':
+            raise HTTPException(status_code=400, detail=f"{field.name} must be provided")
+        else:
+            return v.title()
+
+
 
 
 class Inference(InferenceBase):

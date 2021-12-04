@@ -7,9 +7,14 @@ class TotenBase(BaseModel):
     description: str
 
 
-class TotenCreate(TotenBase):
-    pass
 
+class TotenCreate(TotenBase):
+    @validator('*',  pre=True, always=True)
+    def must_be_provided(cls, v, field):
+        if v == '':
+            raise HTTPException(status_code=400, detail=f"{field.name} must be provided")
+        else:
+            return v.title()
 
 class Toten(TotenBase):
     id: int
