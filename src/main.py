@@ -4,8 +4,8 @@ import uvicorn
 
 from database.models.totens import models as totenModel
 from database.models.inference import models as inferenceModel
-from routes.inference import inference
-from routes.toten import toten
+from routes.inference import InferenceRoute
+from routes.toten import TotenRoute
 from config.settings import SessionLocal, engine
 
 totenModel.Base.metadata.create_all(bind=engine)
@@ -13,8 +13,8 @@ inferenceModel.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.include_router(inference.router)
-app.include_router(toten.router)
+app.include_router(InferenceRoute.router)
+app.include_router(TotenRoute.router)
 
 def get_db():
     db = SessionLocal()
