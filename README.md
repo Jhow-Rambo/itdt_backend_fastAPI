@@ -42,6 +42,9 @@ FastAPI stands on the shoulders of giants:
 * <a href="https://www.starlette.io/" target="_blank">Starlette</a> for the web parts.
 * <a href="https://pydantic-docs.helpmanual.io/" target="_blank">Pydantic</a> for the data parts.
 
+## Access the deployed API
+
+You can access the deployed API documentation by clicking on the following link https://fast-api-itdt.herokuapp.com/docs
 
 ## Installation
 
