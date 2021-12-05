@@ -27,6 +27,6 @@ def get_db():
 async def root():
     return {"message": "Hello World"}
 
-if __name__ == "__main__":
-    # print(__package__)
-    uvicorn.run(app, host="127.0.0.1", port=3000)
+# if __name__ == "__main__":
+#     # print(__package__)
+#     uvicorn.run(app, host="127.0.0.1", port=3000)
