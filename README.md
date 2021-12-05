@@ -71,6 +71,8 @@ $ pip install -r /path/to/requirements.txt
 $ uvicorn main:app --reload --port 3000
 ```
 
+After all this commands the API should be running. Try to access http://localhost:3000/docs to se the documentation.
+
 ## License
 
 This project is licensed under the terms of the MIT license.
