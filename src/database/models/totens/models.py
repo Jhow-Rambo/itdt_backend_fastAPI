@@ -1,4 +1,4 @@
-from database.models.index import *
+from src.database.models.index import *
 
 class Toten(Base):
     __tablename__ = "totens"

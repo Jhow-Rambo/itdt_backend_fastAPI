@@ -1,5 +1,5 @@
-from database.models.index import *
-from database.models.inference import schemas
+from src.database.models.index import *
+from src.database.models.inference import schemas
 
 class TotenBase(BaseModel):
     name: str

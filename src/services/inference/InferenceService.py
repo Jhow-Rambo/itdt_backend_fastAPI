@@ -1,5 +1,5 @@
 from ..index import *
-from database.models.inference import models, schemas 
+from src.database.models.inference import models, schemas 
 
 def create_inference(db: Session, inference: schemas.InferenceCreate, toten_id: int):
     db_inference = models.Inference(**inference.dict(), toten_id=toten_id)

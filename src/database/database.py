@@ -1,4 +1,4 @@
-from config.settings import SessionLocal, engine
+from src.config.settings import SessionLocal, engine
 
 def get_db():
     db = SessionLocal()

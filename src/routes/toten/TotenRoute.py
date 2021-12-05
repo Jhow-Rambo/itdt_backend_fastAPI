@@ -1,6 +1,6 @@
 from ..index import *
 from fastapi import HTTPException
-from database.models.totens import models, schemas 
+from src.database.models.totens import models, schemas 
 
 @router.get("/toten/{id}", response_model=schemas.Toten)
 async def read_one_toten(id: int, db: Session = Depends(get_db)):

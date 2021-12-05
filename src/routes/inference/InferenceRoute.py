@@ -1,5 +1,5 @@
 from ..index import *
-from database.models.inference import models, schemas 
+from src.database.models.inference import models, schemas 
 
 @router.post("/inference/{toten_id}", response_model=schemas.InferenceCreate)
 async def create_toten_inference(toten_id: int, inferenceData: schemas.InferenceCreate, db: Session = Depends(get_db)):

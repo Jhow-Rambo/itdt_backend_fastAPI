@@ -2,11 +2,11 @@ from fastapi import FastAPI
 import uvicorn
 
 
-from database.models.totens import models as totenModel
-from database.models.inference import models as inferenceModel
-from routes.inference import InferenceRoute
-from routes.toten import TotenRoute
-from config.settings import SessionLocal, engine
+from src.database.models.totens import models as totenModel
+from src.database.models.inference import models as inferenceModel
+from src.routes.inference import InferenceRoute
+from src.routes.toten import TotenRoute
+from src.config.settings import SessionLocal, engine
 
 totenModel.Base.metadata.create_all(bind=engine)
 inferenceModel.Base.metadata.create_all(bind=engine)

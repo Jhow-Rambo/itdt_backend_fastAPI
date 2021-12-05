@@ -1,6 +1,6 @@
 from ..index import *
-from database.models.totens import models, schemas
-from database.models.inference.models import Inference
+from src.database.models.totens import models, schemas
+from src.database.models.inference.models import Inference
 
 def create_toten(db: Session, toten: schemas.TotenCreate):
     db_toten = models.Toten(name=toten.name, localization=toten.localization, description=toten.description)
